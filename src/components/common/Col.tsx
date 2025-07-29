@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "@/styles/row.module.css";
+import styles from "@/styles/Row.module.css";
 
 interface ColProps {
   sm?: number;
