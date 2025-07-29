@@ -192,7 +192,7 @@ const Routes = () => {
     return  children ;
   };
   return (
-    <BrowserRouter basename="/demo">
+    <BrowserRouter >
       <Suspense
         fallback={
           <>
