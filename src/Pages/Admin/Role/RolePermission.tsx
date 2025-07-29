@@ -3,13 +3,12 @@ import { Button } from "@/components/shadcn-ui/button";
 import { Eye, Pencil, Plus } from "lucide-react";
 import { RoleFormUI } from "./RoleForm";
 import { RoleDetailGrid } from "./RoleGrid";
-import { useEffect, useState } from "react";
+import {useState } from "react";
 import { Save } from "lucide-react";
 import { RotateCcw } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger } from "@/components/shadcn-ui/tabs";
-import { useAppDispatch, useAppSelector } from "@/Store/reduxhook";
-import { fetchRolesList } from "@/Store/features/AdminSetting/Roles";
-import { fetchMenuList } from "@/Store/features/AdminSetting/Menu";
+import { useAppSelector } from "@/Store/reduxhook";
+
 interface RolePermissionProps {
   setPageType: (args: string) => void;
   pageType: string;
@@ -18,7 +17,7 @@ const RolePermission = ({ setPageType, pageType }: RolePermissionProps) => {
   const [currentMode, setCurrentMode] = useState<string>("View Mode");
   const { data: rolesList } = useAppSelector((state) => state.rolesList);
   const { data: menuList } = useAppSelector((state) => state.menuList);
-  const dispatch = useAppDispatch();
+
   const [Form, setForm] = useState({
     RoleId: "",
     MenuId: "",
@@ -27,10 +26,7 @@ const RolePermission = ({ setPageType, pageType }: RolePermissionProps) => {
   const handleModeChange = (args: string) => {
     setCurrentMode(args);
   };
-  useEffect(() => {
-    rolesList.length == 0 && dispatch(fetchRolesList());
-    menuList.length == 0 && dispatch(fetchMenuList());
-  }, []);
+ 
   return (
     <>
       <div className="block sm:flex justify-between items-center mb-4">

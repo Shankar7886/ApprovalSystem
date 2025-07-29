@@ -2,7 +2,7 @@ import Section from "@/components/common/Section";
 import { Plus, RotateCcw, Save } from "lucide-react";
 import { Button } from "@/components/shadcn-ui/button";
 import RoleCompGrid from "./RoleCompGrid";
-import { useEffect, useRef, useState } from "react";
+import {  useRef, useState } from "react";
 import Row from "@/components/common/Row";
 import Col from "@/components/common/Col";
 import { FloatingLabelInput } from "@/components/common/InputComponent";
@@ -58,8 +58,10 @@ export default function Role({ pageType, setPageType }: rolesProps) {
     });
     setFormVisible(false);
     setViewData({});
+    console.log(ViewData)
     setViewModel(false);
     setShowEdit(false);
+    console.log(viewModel)
   };
   const validate = () => {
     let errors: Record<string, string> = {};
@@ -131,10 +133,7 @@ export default function Role({ pageType, setPageType }: rolesProps) {
       });
     }
   };
-  useEffect(() => {
-    rolesList.length === 0 && dispatch(fetchRolesList());
-  }, [dispatch]);
-  console.log(viewModel, ViewData);
+  
   return (
     <>
       <div className="block sm:flex justify-between items-center mb-4">
