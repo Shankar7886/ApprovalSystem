@@ -1,0 +1,50 @@
+@import '../../node_modules/@syncfusion/ej2-base/styles/material.css';  
+@import '../../node_modules/@syncfusion/ej2-buttons/styles/material.css';  
+@import '../../node_modules/@syncfusion/ej2-calendars/styles/material.css';  
+@import '../../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
+@import '../../node_modules/@syncfusion/ej2-inputs/styles/material.css';  
+@import '../../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../../node_modules/@syncfusion/ej2-notifications/styles/material.css';
+@import "../../node_modules/@syncfusion/ej2-react-grids/styles/material.css";
+
+
+@font-face {
+  font-family: "Inter";
+  src: url("../styles/font-family/Inter_18pt-Medium.ttf") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* .e-grid .e-gridheader {
+  border-top-right-radius: 10px !important;
+  border-top-left-radius: 10px !important;
+} */
+
+.e-grid .e-headercell {
+  color: oklch(0.43 0.22 294.45) !important;
+  background-color: oklch(0.87 0.05 286.41) !important;
+  /* height: 30px !important; */
+  
+  /* font-size: 20px !important; */
+}
+
+
+.e-grid .e-headercelldiv {
+  font-size: 14px !important;
+  font-weight: bold;
+  color: darkblue;
+}
+
+.e-checkbox-wrapper .e-frame.e-check{
+  background-color: green !important;
+}
+.e-checkbox-wrapper .e-frame.e-check{
+   background-color: green !important;
+}
